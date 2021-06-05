@@ -24,8 +24,9 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "action/Speak.action"
-  "action/Recognize.action"
+  action/Speak.action
+  action/Recognize.action
+  msg/Wakeword.msg
 )
 
 if(BUILD_TESTING)
